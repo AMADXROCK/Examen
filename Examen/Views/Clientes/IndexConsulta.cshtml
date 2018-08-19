@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Examen.Models.ModeloClientes>
+
+@{
+    ViewBag.Title = "IndexConsulta";
+}
+
+<h2>IndexConsulta</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.asociado.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.asociado.ApellidoPaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.asociado.ApellidoMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.asociado.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.asociado.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.asociado.Puesto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente.RazonSocial)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.asociado.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.asociado.ApellidoPaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.asociado.ApellidoMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.asociado.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.asociado.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.asociado.Puesto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente.RazonSocial)
+        </td>
+    </tr>
+}
+
+</table>

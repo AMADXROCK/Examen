@@ -19,6 +19,15 @@ namespace Examen.Controllers
         {
             return View(db.Clientes.ToList());
         }
+        public ActionResult IndexConsulta(int? id)
+        {
+            ModeloClientes modelo = new ModeloClientes();
+            modelo.cliente = new Consulta().consultar(id);
+            modelo.asociado = modelo.cliente.Asociados.FirstOrDefault();
+            return View(modelo);
+        }
+
+       
 
         // GET: Clientes/Details/5
         public ActionResult Details(int? id)
